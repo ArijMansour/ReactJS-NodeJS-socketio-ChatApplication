@@ -33,7 +33,7 @@ const Chat = ({ location }) => {
         alert(error);
       }
     });
-  }, [location.search]);
+  }, [location.search]);//[ENDPOINT,location.search]
   
   useEffect(() => {
     socket.on('message', message => {
@@ -46,10 +46,10 @@ const Chat = ({ location }) => {
 }, []);
 
   const sendMessage = (event) => {
-    event.preventDefault();
+    event.preventDefault(); // to prevent the page refresh 
 
     if(message) {
-      socket.emit('sendMessage', message, () => setMessage(''));
+      socket.emit('sendMessage', message, () => setMessage('')); // clear message 
     }
   }
 
