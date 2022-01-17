@@ -1,7 +1,7 @@
 import React  from 'react' ; 
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom' ; 
-import Join from './components/Join';
-import Chat from './components/Chat';
+import Join from './components/Join/Join';
+import Chat from './components/Chat/Chat';
 /*const App=()=>(
     <Router>
         <Route path='/' exact component={Join}/>
@@ -10,7 +10,7 @@ import Chat from './components/Chat';
     </Router>
 );*/
 
-/************************ New Router setup V6  */
+/************************ New Router setup V6 ***********************/
 function App() {
     return (
       <Router>
